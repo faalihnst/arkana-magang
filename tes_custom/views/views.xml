@@ -1,0 +1,58 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+    <record model="ir.ui.view" id="view_employee_form">
+      <field name="name">hr_edit</field>
+      <field name="model">hr.employee</field>
+      <field name="inherit_id" ref="hr.view_employee_form"/>
+      <field name="arch" type="xml">
+          <field name="address_id" position="before">
+              <field name="no_karyawan"/>
+          </field>
+      </field>
+    </record>
+
+    <!-- actions opening views on models -->
+    <!--
+    <record model="ir.actions.act_window" id="tes.custom.action_window">
+      <field name="name">tes.custom window</field>
+      <field name="res_model">tes.custom.tes.custom</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    -->
+
+    <!-- server action to the one above -->
+    <!--
+    <record model="ir.actions.server" id="tes.custom.action_server">
+      <field name="name">tes.custom server</field>
+      <field name="model_id" ref="model_tes.custom_tes.custom"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+      </field>
+    </record>
+    -->
+
+    <!-- Top menu item -->
+    <!--
+    <menuitem name="tes.custom" id="tes.custom.menu_root"/>
+    -->
+    <!-- menu categories -->
+    <!--
+    <menuitem name="Menu 1" id="tes.custom.menu_1" parent="tes.custom.menu_root"/>
+    <menuitem name="Menu 2" id="tes.custom.menu_2" parent="tes.custom.menu_root"/>
+    -->
+    <!-- actions -->
+    <!--
+    <menuitem name="List" id="tes.custom.menu_1_list" parent="tes.custom.menu_1"
+              action="tes.custom.action_window"/>
+    <menuitem name="Server to list" id="tes.custom" parent="tes.custom.menu_2"
+              action="tes.custom.action_server"/>
+    -->
+  </data>
+</odoo>
