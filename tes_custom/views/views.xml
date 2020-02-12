@@ -10,6 +10,13 @@
           <field name="address_id" position="before">
               <field name="no_karyawan"/>
           </field>
+          <field name="country_id" position="after">
+              <field name="no_NPWP"/>
+              <field name="no_KTP"/>
+              <field name="no_BPJS_Kes"/>
+              <field name="no_BPJS_TK"/>
+              <field name="tgl_masuk"/>
+          </field>
       </field>
     </record>
 
