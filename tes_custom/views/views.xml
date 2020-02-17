@@ -16,9 +16,23 @@
               <field name="no_BPJS_Kes"/>
               <field name="no_BPJS_TK"/>
               <field name="tgl_masuk"/>
+              <field name="sertif_ids" widget="many2many_tags"/>
+          </field>
+          <field name="children" position="after">
+            <separator string="Data Keluarga"/>
+            <field name="keluarga_id" widget="one2many_list">
+              <tree editable="bottom" string="Data Keluarga">
+                <field name="status"/>
+                <field name="nama"/>
+                <field name="tgl_lahir"/>
+                <field name="umur"/>
+              </tree>
+            </field>
           </field>
       </field>
     </record>
+
+
 
     <!-- actions opening views on models -->
     <!--
